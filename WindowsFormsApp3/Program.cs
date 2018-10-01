@@ -18,8 +18,9 @@ namespace WindowsFormsApp3
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
             AccountList a = new AccountList("accounts.json");
-            Account acct = a.FindAcct("123456781234");
-            Console.WriteLine(acct);
+            //Account acct = a.FindAcct("123456781234");
+
+            a.UpdateAcct(new Account("123456781234","1234",5,false,25.5));
         }
     }
 }
