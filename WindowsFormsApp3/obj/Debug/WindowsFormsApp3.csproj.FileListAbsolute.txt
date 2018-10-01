@@ -11,3 +11,4 @@
 /Users/Samuller/Desktop/GitHub/atm-3101/WindowsFormsApp3/obj/Debug/WindowsFormsApp3.csproj.CopyComplete
 /Users/Samuller/Desktop/GitHub/atm-3101/WindowsFormsApp3/obj/Debug/WindowsFormsApp3.exe
 /Users/Samuller/Desktop/GitHub/atm-3101/WindowsFormsApp3/obj/Debug/WindowsFormsApp3.pdb
+/Users/Samuller/Desktop/GitHub/atm-3101/WindowsFormsApp3/bin/Debug/accounts.json
