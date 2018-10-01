@@ -76,6 +76,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="AccountList.cs" />
+    <Compile Include="Account.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
