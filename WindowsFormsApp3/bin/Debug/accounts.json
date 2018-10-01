@@ -1,0 +1,14 @@
+[{
+ "cardNum":"123456781234",
+ "pin":"1234",
+ "lastTimeAccesed":0.0,
+ "isLocked":false,
+ "balance":152.67
+},
+{
+ "cardNum":"876543218765",
+ "pin":"4321",
+ "lastTimeAccesed":0.0,
+ "isLocked":false,
+ "balance":7.23
+}]

@@ -3,18 +3,14 @@ namespace WindowsFormsApp3
 {
     public class Account
     {
-        private readonly string cardNum, pin;
-        private readonly long lastAccess;
-        private bool isLocked;
-        private double balance;
+        public string cardNum {get; set;}
+        public string pin { get; set; }
+        public double lastAccess { get; set; }
+        public bool isLocked { get; set; }
+        public double balance { get; set; }
 
-        public Account(string c, string p, int a, bool l, double b)
+        public Account()
         {
-            this.cardNum = c;
-            this.pin = p;
-            this.lastAccess = System.DateTime.Now.Ticks;
-            this.isLocked = l;
-            this.balance = b;
         }
 
         // Unlock the account
@@ -35,6 +31,10 @@ namespace WindowsFormsApp3
         // Subtract specified amount from account balance
         public void Withdraw(double x) {
             this.balance -= x;
+        }
+
+        public string GetCardNum() {
+            return this.cardNum;
         }
     }
 }

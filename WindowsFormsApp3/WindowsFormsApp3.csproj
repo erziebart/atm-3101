@@ -82,6 +82,7 @@
     <Compile Include="AccountList.cs" />
     <Compile Include="Account.cs" />
     <None Include="packages.config" />
+    <None Include="accounts.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
