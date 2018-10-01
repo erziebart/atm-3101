@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{4051279A-8676-4F01-A3D4-B5AABDE5478E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmptyClass.cs">
     <Files>
       <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="EmptyClass.cs" Line="4" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WindowsFormsApp3 PreferredExecutionTarget="MonoDevelop.Default" />
