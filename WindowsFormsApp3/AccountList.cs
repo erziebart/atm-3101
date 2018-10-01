@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Newtonsoft.Json;
 
 namespace WindowsFormsApp3
@@ -14,9 +15,9 @@ namespace WindowsFormsApp3
             this.js = new JsonSerializer();
         }
 
-        //public Account FindAcct(string acctNum) {
-
-        //    return new Account();
-        //}
+        public Account FindAcct(string acctNum) {
+            string json = File.ReadAllText("accounts.json");
+            return new Account();
+        }
     }
 }
