@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace WindowsFormsApp3
 {
+    // This is an Account class that can extract entries from accounts.json
+
     public class Account
     {
         public string CardNum { get; set; }

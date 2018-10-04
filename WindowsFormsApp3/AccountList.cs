@@ -7,6 +7,7 @@ using Newtonsoft.Json.Linq;
 
 namespace WindowsFormsApp3
 {
+    // This class handles reading and writing json like a database
     public class AccountList
     {
         private readonly string acctFile;

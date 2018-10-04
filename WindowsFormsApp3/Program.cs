@@ -14,13 +14,9 @@ namespace WindowsFormsApp3
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            AccountList a = new AccountList("accounts.json");
-            //Account acct = a.FindAcct("123456781234");
-
-            a.UpdateAcct(new Account("123456781234","1234",5,false,25.5));
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
