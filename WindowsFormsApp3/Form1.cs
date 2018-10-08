@@ -10,18 +10,20 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
         private AccountList accountList;
         private Account instanceAccount;
 
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
             this.accountList = new AccountList("accounts.json");
             this.instanceAccount = accountList.FindAcct("876543218765");
             label1.Text = this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
+            //panel1.SendToBack();
+            panel1.Hide();
             // Right now this is hardcoded to use a specific account. Once we have a login protocol, switch out the manual string for whatever is passed
         }
 
@@ -47,6 +49,8 @@ namespace WindowsFormsApp3
             accountList.UpdateAcct(account);
 
             int toWithdraw = (numberOf20s * 20);
+            panel1.Show();
+
             if (account.Balance - toWithdraw >= 0)
             {
                 account.Balance -= toWithdraw;
@@ -69,6 +73,21 @@ namespace WindowsFormsApp3
         private void button3_Click(object sender, EventArgs e)
         {
             Logout();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void closeAmountToWithdrawButton_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            int temp = (int) numericUpDown1.Value;
+            userNameLabel.Text = temp.ToString();
         }
     }
 }

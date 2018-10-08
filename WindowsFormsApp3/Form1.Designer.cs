@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,12 @@
             this.depositSlotButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.closeAmountToWithdrawButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -123,11 +129,51 @@
             this.button4.Text = "Dispenser";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.closeAmountToWithdrawButton);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Location = new System.Drawing.Point(194, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(312, 193);
+            this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(94, 142);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 0;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(94, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Amount of 20\'s to withdraw";
+            // 
+            // closeAmountToWithdrawButton
+            // 
+            this.closeAmountToWithdrawButton.Location = new System.Drawing.Point(234, 3);
+            this.closeAmountToWithdrawButton.Name = "closeAmountToWithdrawButton";
+            this.closeAmountToWithdrawButton.Size = new System.Drawing.Size(75, 23);
+            this.closeAmountToWithdrawButton.TabIndex = 2;
+            this.closeAmountToWithdrawButton.Text = "Close";
+            this.closeAmountToWithdrawButton.UseVisualStyleBackColor = true;
+            this.closeAmountToWithdrawButton.Click += new System.EventHandler(this.closeAmountToWithdrawButton_Click);
+            // 
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.depositSlotButton);
@@ -137,8 +183,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "MainMenu";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,6 +203,10 @@
         private System.Windows.Forms.Button depositSlotButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button closeAmountToWithdrawButton;
     }
 }
 
