@@ -19,8 +19,9 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             this.accountList = new AccountList("accounts.json");
-            this.instanceAccount = accountList.FindAcct("123456781234");
+            this.instanceAccount = accountList.FindAcct("876543218765");
             label1.Text = this.instanceAccount.Balance.ToString();
+            userNameLabel.Text = this.instanceAccount.CardNum;
             // Right now this is hardcoded to use a specific account. Once we have a login protocol, switch out the manual string for whatever is passed
         }
 
