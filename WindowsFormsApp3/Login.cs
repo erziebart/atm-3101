@@ -68,13 +68,13 @@ namespace WindowsFormsApp3
       }
     }
 
-    /* returns true if the account is unlocked and the pin is correct */
-    private bool IsValidLogin(Account acct, string pin)
+    /* returns true if the user is allowed to access the account */
+    private bool IsValidAcct(Account acct, string pin)
     {
       return (acct.Pin.Equals(pin) && !acct.IsLocked);
     }
 
-    /* opens the main menu screen for the user */
+    /* opens the user's main menu */
     private void OpenMainMenu(Account acct)
     {
       //MainMenu menu = new MainMenu(acct, atm);
