@@ -12,11 +12,11 @@ namespace WindowsFormsApp3
 {
   public partial class Login : Form
   {
-    //ATM atm;
+    private ATM atm;
 
-    public Login(/*ATM atm*/)
+    public Login(ATM atm)
     {
-      //this.atm = atm;
+      this.atm = atm;
       InitializeComponent();
     }
 
@@ -32,19 +32,55 @@ namespace WindowsFormsApp3
 
     private void LoginButton_Click(object sender, EventArgs e)
     {
-      this.Hide();
+      Submit();
     }
 
-    private bool IsValidAcct(Account acct, string pin)
+    /* submit the user input to the system */
+    private void Submit()
+    {
+      // get the account number and pin from the user input
+      String acctNum = this.AcctNumBox.Text;
+      String pin = this.PinBox.Text;
+
+      // load the user from the database that matches the account number
+      AccountList db = atm.GetDatabase();
+      Account user = db.FindAcct(acctNum);
+
+      // check if the account pin is correct
+      if (user != null)
+      {
+        if (IsValidLogin(user, pin))
+        {
+          // open the user's main menu screen
+          OpenMainMenu(user);
+        }
+        else
+        {
+          // lock the user account and update in database
+          user.Lock();
+          db.UpdateAcct(user);
+        }
+      }
+      else
+      {
+        // the account does not exist
+        Console.WriteLine("Account not found");
+      }
+    }
+
+    /* returns true if the account is unlocked and the pin is correct */
+    private bool IsValidLogin(Account acct, string pin)
     {
       return (acct.Pin.Equals(pin) && !acct.IsLocked);
     }
 
+    /* opens the main menu screen for the user */
     private void OpenMainMenu(Account acct)
     {
       //MainMenu menu = new MainMenu(acct, atm);
       //this.Hide();
       //menu.Show();
+      Console.WriteLine("Showing Main Menu");
     }
   }
 }

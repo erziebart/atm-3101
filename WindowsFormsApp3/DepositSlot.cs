@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp3
 {
-    class DepositSlot
+    public class DepositSlot
     {
         public static void AcceptEnvelope()
         {

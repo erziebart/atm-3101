@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp3
 {
-    class Dispenser
+    public class Dispenser
     {
         public static void DispenseCash(int numBills)
         {

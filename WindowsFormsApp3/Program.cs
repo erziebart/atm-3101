@@ -14,9 +14,11 @@ namespace WindowsFormsApp3
         [STAThread]
         static void Main()
         {
+            String jsonFilename = "accounts.json";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            ATM atm = new ATM(jsonFilename);
+            Application.Run(new Login(atm));
         }
     }
 }
