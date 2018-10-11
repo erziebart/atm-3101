@@ -50,6 +50,9 @@
     <Reference Include="nunit.framework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATM.cs" />
+    <Compile Include="DepositSlot.cs" />
+    <Compile Include="Dispenser.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
