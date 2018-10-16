@@ -17,6 +17,10 @@ namespace WindowsFormsApp3
             this.acctFile = s;
         }
 
+        // Deserialize the json into a list of Account objects
+        // Iterate through the list to find the object with matching account number
+        // Return that object
+        // If not found, return null
         public Account FindAcct(string acctNum) {
             //string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), acctFile);
             string path = "../../" + acctFile;
@@ -30,6 +34,12 @@ namespace WindowsFormsApp3
             return null;
         }
 
+        // Deserialize json into a list of account objects
+        // Go through the list and find the account to update
+        // Store that account in a variable
+        // Remove that account from the list
+        // Add the passed in account to the list
+        // Serialize the json and write to file
         public void UpdateAcct(Account acct) {
             string path = "../../" + acctFile;
             string json = File.ReadAllText(path);
