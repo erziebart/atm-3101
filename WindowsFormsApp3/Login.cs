@@ -52,6 +52,8 @@ namespace WindowsFormsApp3
         if (IsValidLogin(user, pin))
         {
           // open the user's main menu screen
+          user.ClearLoginAttempts();
+          db.UpdateAcct(user);
           OpenMainMenu(user);
         }
         else
