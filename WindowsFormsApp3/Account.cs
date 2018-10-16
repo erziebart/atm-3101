@@ -48,5 +48,15 @@ namespace WindowsFormsApp3
         public void Withdraw(double x) {
             this.Balance -= x;
         }
+
+        // Increase login attempts by one
+        public void AddLoginAttempt() {
+            this.LoginAttempts += 1;
+        }
+
+        // Clears log in attempts
+        public void ClearLoginAttempts() {
+            this.LoginAttempts = 0;
+        }
     }
 }
