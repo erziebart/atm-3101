@@ -2,14 +2,14 @@
   {
     "CardNum": "123456781234",
     "Pin": "1234",
-    "LastTimeAccessed": 0.0,
+    "LoginAttempts": 0.0,
     "IsLocked": false,
     "Balance": 1.0
   },
   {
     "CardNum": "876543218765",
     "Pin": "8765",
-    "LastTimeAccessed": 0.0,
+    "LoginAttempts": 0.0,
     "IsLocked": false,
     "Balance": 400.0
   }
