@@ -69,7 +69,7 @@ namespace WindowsFormsApp3
     }
 
     /* returns true if the user is allowed to access the account */
-    private bool IsValidAcct(Account acct, string pin)
+    private bool IsValidLogin(Account acct, string pin)
     {
       return (acct.Pin.Equals(pin) && !acct.IsLocked);
     }
