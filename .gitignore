@@ -29,3 +29,4 @@
 *.config
 
 WindowsFormsApp3/.vs/*
+WindowsFormsApp3/obj/*
