@@ -77,6 +77,7 @@ namespace WindowsFormsApp3
       else
       {
         // the account does not exist
+        MessageBox.Show("Please try again.", "Account not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
         Console.WriteLine("Account not found");
       }
     }
