@@ -56,9 +56,18 @@ namespace WindowsFormsApp3
         }
         else
         {
-          // lock the user account and update in database
-          user.Lock();
-          db.UpdateAcct(user);
+          // Check # login attempts
+          if (user.LoginAttempts >= 3) {
+            // lock the user account and update in database
+            user.Lock();
+            db.UpdateAcct(user);
+            Console.WriteLine("Your account has been locked due to too many failed login attempts. Please contact your bank");
+          }
+          else {
+            user.AddLoginAttempt();
+            db.UpdateAcct(user);
+            Console.WriteLine("Invalid PIN");
+          }
         }
       }
       else
