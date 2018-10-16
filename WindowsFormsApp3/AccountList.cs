@@ -18,7 +18,8 @@ namespace WindowsFormsApp3
         }
 
         public Account FindAcct(string acctNum) {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), acctFile);
+            //string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), acctFile);
+            string path = "../../" + acctFile;
             string json = File.ReadAllText(path);
             List<Account> accts = JsonConvert.DeserializeObject<List<Account>>(json);
             foreach(Account a in accts) {
@@ -30,7 +31,8 @@ namespace WindowsFormsApp3
         }
 
         public void UpdateAcct(Account acct) {
-            string json = File.ReadAllText(acctFile);
+            string path = "../../" + acctFile;
+            string json = File.ReadAllText(path);
             List<Account> entries = JsonConvert.DeserializeObject<List<Account>>(json);
             Account toRemove = new Account();
             foreach (Account a in entries)
@@ -44,7 +46,7 @@ namespace WindowsFormsApp3
             entries.Add(acct);
 
             string newJSON = JsonConvert.SerializeObject(entries.ToArray(), Formatting.Indented);
-            File.WriteAllText(acctFile, newJSON);
+            File.WriteAllText(path, newJSON);
         }
     }
 }
