@@ -28,4 +28,11 @@
 *.xml
 *.config
 
+# Logs #
+#########
+*.htm
+*.log
+*.txt
+
 WindowsFormsApp3/.vs/*
+WindowsFormsApp3/obj/*

@@ -44,7 +44,7 @@ namespace WindowsFormsApp3
             entries.Add(acct);
 
             string newJSON = JsonConvert.SerializeObject(entries.ToArray(), Formatting.Indented);
-            File.WriteAllText(acctFile, newJSON);
+            File.WriteAllText("../../" + acctFile, newJSON);
         }
     }
 }
