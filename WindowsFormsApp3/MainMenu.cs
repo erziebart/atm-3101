@@ -16,6 +16,7 @@ namespace WindowsFormsApp3
         private Account instanceAccount;
         private Login login;
         private int numToWithdraw;
+        private ATM atm;
 
         public MainMenu(Account account, Login login)
         {
@@ -23,6 +24,7 @@ namespace WindowsFormsApp3
             this.accountList = new AccountList("accounts.json");
             this.instanceAccount = account;
             this.login = login;
+            this.atm = new ATM("accounts.json");
             label1.Text = "$" + this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
             panel1.Hide();
@@ -53,6 +55,7 @@ namespace WindowsFormsApp3
 
             if (account.Balance - toWithdraw >= 0)
             {
+                this.atm.TakeOut(toWithdraw);
                 account.Balance -= toWithdraw;
                 label1.Text = "$" + account.Balance.ToString();
                 DispenseCash(numberOf20s);
