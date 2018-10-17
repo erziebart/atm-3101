@@ -41,9 +41,10 @@
             this.WithdrawConfirmationButton = new System.Windows.Forms.Button();
             this.closeAmountToWithdrawButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.AmounfOf20sToWithdrawLabel = new System.Windows.Forms.Label();
+            this.Increase20sToWithdrawButton = new System.Windows.Forms.Button();
+            this.Decrease20sToWithdrawButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -134,10 +135,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.Decrease20sToWithdrawButton);
+            this.panel1.Controls.Add(this.Increase20sToWithdrawButton);
+            this.panel1.Controls.Add(this.AmounfOf20sToWithdrawLabel);
             this.panel1.Controls.Add(this.WithdrawConfirmationButton);
             this.panel1.Controls.Add(this.closeAmountToWithdrawButton);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Location = new System.Drawing.Point(194, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(312, 193);
@@ -174,13 +177,35 @@
             this.label4.Text = "Amount of 20\'s to withdraw";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // numericUpDown1
+            // AmounfOf20sToWithdrawLabel
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(97, 137);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.AmounfOf20sToWithdrawLabel.AutoSize = true;
+            this.AmounfOf20sToWithdrawLabel.Location = new System.Drawing.Point(97, 76);
+            this.AmounfOf20sToWithdrawLabel.Name = "AmounfOf20sToWithdrawLabel";
+            this.AmounfOf20sToWithdrawLabel.Size = new System.Drawing.Size(13, 13);
+            this.AmounfOf20sToWithdrawLabel.TabIndex = 4;
+            this.AmounfOf20sToWithdrawLabel.Text = "0";
+            this.AmounfOf20sToWithdrawLabel.Click += new System.EventHandler(this.AmounfOf20sToWithdrawLabel_Click);
+            // 
+            // Increase20sToWithdrawButton
+            // 
+            this.Increase20sToWithdrawButton.Location = new System.Drawing.Point(82, 134);
+            this.Increase20sToWithdrawButton.Name = "Increase20sToWithdrawButton";
+            this.Increase20sToWithdrawButton.Size = new System.Drawing.Size(75, 23);
+            this.Increase20sToWithdrawButton.TabIndex = 5;
+            this.Increase20sToWithdrawButton.Text = "+";
+            this.Increase20sToWithdrawButton.UseVisualStyleBackColor = true;
+            this.Increase20sToWithdrawButton.Click += new System.EventHandler(this.Increase20sToWithdrawButton_Click);
+            // 
+            // Decrease20sToWithdrawButton
+            // 
+            this.Decrease20sToWithdrawButton.Location = new System.Drawing.Point(177, 134);
+            this.Decrease20sToWithdrawButton.Name = "Decrease20sToWithdrawButton";
+            this.Decrease20sToWithdrawButton.Size = new System.Drawing.Size(75, 23);
+            this.Decrease20sToWithdrawButton.TabIndex = 6;
+            this.Decrease20sToWithdrawButton.Text = "-";
+            this.Decrease20sToWithdrawButton.UseVisualStyleBackColor = true;
+            this.Decrease20sToWithdrawButton.Click += new System.EventHandler(this.Decrease20sToWithdrawButton_Click);
             // 
             // MainMenu
             // 
@@ -201,7 +226,6 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,9 +244,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button closeAmountToWithdrawButton;
         private System.Windows.Forms.Button WithdrawConfirmationButton;
+        private System.Windows.Forms.Label AmounfOf20sToWithdrawLabel;
+        private System.Windows.Forms.Button Increase20sToWithdrawButton;
+        private System.Windows.Forms.Button Decrease20sToWithdrawButton;
     }
 }
 

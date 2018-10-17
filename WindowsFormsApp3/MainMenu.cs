@@ -25,8 +25,8 @@ namespace WindowsFormsApp3
             this.login = login;
             label1.Text = this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
-            //panel1.
             panel1.Hide();
+            numToWithdraw = 0;
         }
 
         public void Logout()
@@ -46,12 +46,10 @@ namespace WindowsFormsApp3
         public void Withdraw(int numberOf20s, Account account)
         {
             // ATM.takeOut((numberOf20s * 20));
-            account.Balance -= (numberOf20s * 20);
             // Dispenser.DispenseCash(numberOf20s_;
             accountList.UpdateAcct(account);
 
             int toWithdraw = (numberOf20s * 20);
-            panel1.Show();
 
             if (account.Balance - toWithdraw >= 0)
             {
@@ -78,7 +76,7 @@ namespace WindowsFormsApp3
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Withdraw(2, this.instanceAccount);
+            panel1.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -96,16 +94,13 @@ namespace WindowsFormsApp3
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            this.numToWithdraw += 1;
-            numericUpDown1.Value = this.numToWithdraw;
+        { 
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Withdraw(numToWithdraw, this.instanceAccount);
-            numToWithdraw = 0;
-            numericUpDown1.Value = 0;
+
         }
 
         private void depositSlotButton_Click(object sender, EventArgs e)
@@ -115,7 +110,31 @@ namespace WindowsFormsApp3
 
         private void WithdrawConfirmationButton_Click(object sender, EventArgs e)
         {
+            Withdraw(numToWithdraw, this.instanceAccount);
+            numToWithdraw = 0;
+            AmounfOf20sToWithdrawLabel.Text = 0.ToString();
+            panel1.Hide();
+        }
 
+        private void AmounfOf20sToWithdrawLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Increase20sToWithdrawButton_Click(object sender, EventArgs e)
+        {
+            this.numToWithdraw += 1;
+            AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
+        }
+
+        private void Decrease20sToWithdrawButton_Click(object sender, EventArgs e)
+        {
+            if (numToWithdraw > 0)
+            {
+                this.numToWithdraw -= 1;
+            }
+
+            AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
         }
     }
 }
