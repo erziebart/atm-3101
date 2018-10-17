@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.WithdrawConfirmationButton = new System.Windows.Forms.Button();
             this.closeAmountToWithdrawButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -110,6 +111,7 @@
             this.depositSlotButton.TabIndex = 7;
             this.depositSlotButton.Text = "Envelope";
             this.depositSlotButton.UseVisualStyleBackColor = true;
+            this.depositSlotButton.Click += new System.EventHandler(this.depositSlotButton_Click);
             // 
             // label3
             // 
@@ -132,14 +134,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.WithdrawConfirmationButton);
             this.panel1.Controls.Add(this.closeAmountToWithdrawButton);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Location = new System.Drawing.Point(194, 23);
+            this.panel1.Location = new System.Drawing.Point(194, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(312, 193);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // WithdrawConfirmationButton
+            // 
+            this.WithdrawConfirmationButton.Location = new System.Drawing.Point(234, 167);
+            this.WithdrawConfirmationButton.Name = "WithdrawConfirmationButton";
+            this.WithdrawConfirmationButton.Size = new System.Drawing.Size(75, 23);
+            this.WithdrawConfirmationButton.TabIndex = 3;
+            this.WithdrawConfirmationButton.Text = "Withdraw";
+            this.WithdrawConfirmationButton.UseVisualStyleBackColor = true;
+            this.WithdrawConfirmationButton.Click += new System.EventHandler(this.WithdrawConfirmationButton_Click);
             // 
             // closeAmountToWithdrawButton
             // 
@@ -163,7 +176,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(94, 142);
+            this.numericUpDown1.Location = new System.Drawing.Point(97, 137);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 0;
@@ -209,6 +222,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button closeAmountToWithdrawButton;
+        private System.Windows.Forms.Button WithdrawConfirmationButton;
     }
 }
 

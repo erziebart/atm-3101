@@ -15,19 +15,18 @@ namespace WindowsFormsApp3
         private AccountList accountList;
         private Account instanceAccount;
         private Login login;
+        private int numToWithdraw;
 
         public MainMenu(Account account, Login login)
         {
             InitializeComponent();
             this.accountList = new AccountList("accounts.json");
-            //this.instanceAccount = accountList.FindAcct("876543218765");
             this.instanceAccount = account;
             this.login = login;
             label1.Text = this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
-            //panel1.SendToBack();
+            //panel1.
             panel1.Hide();
-            // Right now this is hardcoded to use a specific account. Once we have a login protocol, switch out the manual string for whatever is passed
         }
 
         public void Logout()
@@ -41,7 +40,6 @@ namespace WindowsFormsApp3
         {
             account.Balance += amount;
             label1.Text = account.Balance.ToString();
-            // DepositSlot.AcceptEnvelope()
             this.accountList.UpdateAcct(account);
         }
 
@@ -59,9 +57,18 @@ namespace WindowsFormsApp3
             {
                 account.Balance -= toWithdraw;
                 label1.Text = account.Balance.ToString();
-                // Dispenser.DispenseCash(numberOf20s);
+                DispenseCash(numberOf20s);
                 accountList.UpdateAcct(account);
             }
+        }
+        public void DepositEnvelope()
+        {
+            DepositSlot.AcceptEnvelope();
+        }
+
+        public void DispenseCash(int numBills)
+        {
+            Dispenser.DispenseCash(numBills);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,11 +97,23 @@ namespace WindowsFormsApp3
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            int temp = (int) numericUpDown1.Value;
-            userNameLabel.Text = temp.ToString();
+            this.numToWithdraw += 1;
+            numericUpDown1.Value = this.numToWithdraw;
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+            Withdraw(numToWithdraw, this.instanceAccount);
+            numToWithdraw = 0;
+            numericUpDown1.Value = 0;
+        }
+
+        private void depositSlotButton_Click(object sender, EventArgs e)
+        {
+            DepositEnvelope();
+        }
+
+        private void WithdrawConfirmationButton_Click(object sender, EventArgs e)
         {
 
         }
