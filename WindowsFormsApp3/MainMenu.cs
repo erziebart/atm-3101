@@ -14,12 +14,15 @@ namespace WindowsFormsApp3
     {
         private AccountList accountList;
         private Account instanceAccount;
+        private Login login;
 
-        public MainMenu()
+        public MainMenu(Account account, Login login)
         {
             InitializeComponent();
             this.accountList = new AccountList("accounts.json");
-            this.instanceAccount = accountList.FindAcct("876543218765");
+            //this.instanceAccount = accountList.FindAcct("876543218765");
+            this.instanceAccount = account;
+            this.login = login;
             label1.Text = this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
             //panel1.SendToBack();
@@ -30,6 +33,7 @@ namespace WindowsFormsApp3
         public void Logout()
         {
             Close();
+            login.Show();
             //Go back to login
         }
 
@@ -88,6 +92,11 @@ namespace WindowsFormsApp3
         {
             int temp = (int) numericUpDown1.Value;
             userNameLabel.Text = temp.ToString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

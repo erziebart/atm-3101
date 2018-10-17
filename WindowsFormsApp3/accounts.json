@@ -12,5 +12,12 @@
     "LastTimeAccessed": 0.0,
     "IsLocked": false,
     "Balance": 425.0
+  },
+  {
+    "CardNum": "1",
+    "Pin": "1234",
+    "LastTimeAccessed": 0.0,
+    "IsLocked": false,
+    "Balance": 765.0
   }
 ]
