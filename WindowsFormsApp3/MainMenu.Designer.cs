@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.depositButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.withdrawButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.userNameLabel = new System.Windows.Forms.Label();
-            this.depositSlotButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.WithdrawPanel = new System.Windows.Forms.Panel();
             this.withdrawOther = new System.Windows.Forms.RadioButton();
             this.withdraw100 = new System.Windows.Forms.RadioButton();
@@ -75,15 +71,6 @@
             this.depositButton.UseVisualStyleBackColor = true;
             this.depositButton.Click += new System.EventHandler(this.depositButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 14);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "<balance>";
-            // 
             // withdrawButton
             // 
             this.withdrawButton.Location = new System.Drawing.Point(405, 241);
@@ -104,15 +91,6 @@
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 14);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Account balance:";
-            // 
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
@@ -122,13 +100,6 @@
             this.userNameLabel.TabIndex = 6;
             this.userNameLabel.Text = "<user-name>";
             // 
-            // depositSlotButton
-            // 
-            this.depositSlotButton.Location = new System.Drawing.Point(0, 0);
-            this.depositSlotButton.Name = "depositSlotButton";
-            this.depositSlotButton.Size = new System.Drawing.Size(75, 23);
-            this.depositSlotButton.TabIndex = 12;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -137,13 +108,6 @@
             this.label3.Size = new System.Drawing.Size(62, 14);
             this.label3.TabIndex = 8;
             this.label3.Text = "Account id:";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 11;
             // 
             // WithdrawPanel
             // 
@@ -407,14 +371,10 @@
             this.Controls.Add(this.checkBalancePanel);
             this.Controls.Add(this.depositPanel);
             this.Controls.Add(this.WithdrawPanel);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.depositSlotButton);
             this.Controls.Add(this.userNameLabel);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.withdrawButton);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.depositButton);
             this.Controls.Add(this.checkBalanceButton);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -434,14 +394,10 @@
         #endregion
 
         private System.Windows.Forms.Button depositButton;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button withdrawButton;
         private System.Windows.Forms.Button logoutButton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label userNameLabel;
-        private System.Windows.Forms.Button depositSlotButton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel WithdrawPanel;
         private System.Windows.Forms.Label amountToWithdrawText;
         private System.Windows.Forms.Button withdrawClose;

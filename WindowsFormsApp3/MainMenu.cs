@@ -26,7 +26,6 @@ namespace WindowsFormsApp3
             this.instanceAccount = account;
             this.login = login;
             this.atm = new ATM("accounts.json");
-            label1.Text = "$" + this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
             WithdrawPanel.Hide();
             depositPanel.Hide();
@@ -46,15 +45,13 @@ namespace WindowsFormsApp3
         public void Deposit(long amount, Account account)
         {
             account.Balance += amount;
-            label1.Text = "$" + account.Balance.ToString();
             this.accountList.UpdateAcct(account);
             System.Windows.Forms.MessageBox.Show("Deposit of: $" + this.amtToDeposit.ToString() + " Successful");
         }
 
         public void Withdraw(int numberOf20s, Account account)
         {
-            // ATM.takeOut((numberOf20s * 20));
-            // Dispenser.DispenseCash(numberOf20s_;
+
             accountList.UpdateAcct(account);
 
             int toWithdraw = (numberOf20s * 20);
@@ -68,7 +65,6 @@ namespace WindowsFormsApp3
             {
                 
                 account.Balance -= toWithdraw;
-                label1.Text = "$" + account.Balance.ToString();
                 DispenseCash(numberOf20s);
                 accountList.UpdateAcct(account);
                 System.Windows.Forms.MessageBox.Show("Withdrawal of: $" + toWithdraw.ToString() + " Successful");
@@ -78,10 +74,6 @@ namespace WindowsFormsApp3
                 System.Windows.Forms.MessageBox.Show("Insufficient acount funds");
             }
         }
-        //public void DepositEnvelope()
-        //{
-        //    DepositSlot.AcceptEnvelope();
-        //}
 
         public void DispenseCash(int numBills)
         {
@@ -124,11 +116,6 @@ namespace WindowsFormsApp3
 
         }
 
-        //private void depositSlotButton_Click(object sender, EventArgs e)
-        //{
-        //    DepositEnvelope();
-        //    System.Windows.Forms.MessageBox.Show("Envelope Deposited");
-        //}
         private void depositEnter_Click(object sender, EventArgs e)
         {
             this.amtToDeposit = Convert.ToInt64(amountToDepositInput.Text);
