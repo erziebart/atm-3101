@@ -59,9 +59,14 @@ namespace WindowsFormsApp3
 
             int toWithdraw = (numberOf20s * 20);
 
+            if (!this.atm.TakeOut(numberOf20s))
+            {
+                return;
+            }
+
             if (account.Balance - toWithdraw >= 0)
             {
-                this.atm.TakeOut(numberOf20s);
+                
                 account.Balance -= toWithdraw;
                 label1.Text = "$" + account.Balance.ToString();
                 DispenseCash(numberOf20s);
