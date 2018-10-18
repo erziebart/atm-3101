@@ -14,50 +14,67 @@ namespace WindowsFormsApp3
     {
         private AccountList accountList;
         private Account instanceAccount;
+        private Login login;
+        private int numToWithdraw;
+        private ATM atm;
 
-        public MainMenu()
+        public MainMenu(Account account, Login login)
         {
             InitializeComponent();
             this.accountList = new AccountList("accounts.json");
-            this.instanceAccount = accountList.FindAcct("876543218765");
-            label1.Text = this.instanceAccount.Balance.ToString();
+            this.instanceAccount = account;
+            this.login = login;
+            this.atm = new ATM("accounts.json");
+            label1.Text = "$" + this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
-            //panel1.SendToBack();
             panel1.Hide();
-            // Right now this is hardcoded to use a specific account. Once we have a login protocol, switch out the manual string for whatever is passed
+            numToWithdraw = 0;
         }
 
         public void Logout()
         {
             Close();
+            login.Show();
             //Go back to login
         }
 
         public void Deposit(int amount, Account account)
         {
             account.Balance += amount;
-            label1.Text = account.Balance.ToString();
-            // DepositSlot.AcceptEnvelope()
+            label1.Text = "$" + account.Balance.ToString();
             this.accountList.UpdateAcct(account);
         }
 
         public void Withdraw(int numberOf20s, Account account)
         {
             // ATM.takeOut((numberOf20s * 20));
-            account.Balance -= (numberOf20s * 20);
             // Dispenser.DispenseCash(numberOf20s_;
             accountList.UpdateAcct(account);
 
             int toWithdraw = (numberOf20s * 20);
-            panel1.Show();
 
             if (account.Balance - toWithdraw >= 0)
             {
+                this.atm.TakeOut(toWithdraw);
                 account.Balance -= toWithdraw;
-                label1.Text = account.Balance.ToString();
-                // Dispenser.DispenseCash(numberOf20s);
+                label1.Text = "$" + account.Balance.ToString();
+                DispenseCash(numberOf20s);
                 accountList.UpdateAcct(account);
+                System.Windows.Forms.MessageBox.Show("Withdrawal of: $" + toWithdraw.ToString() + " Successful");
             }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Insufficient acount funds");
+            }
+        }
+        public void DepositEnvelope()
+        {
+            DepositSlot.AcceptEnvelope();
+        }
+
+        public void DispenseCash(int numBills)
+        {
+            Dispenser.DispenseCash(numBills);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,7 +84,7 @@ namespace WindowsFormsApp3
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Withdraw(2, this.instanceAccount);
+            panel1.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -81,13 +98,59 @@ namespace WindowsFormsApp3
 
         private void closeAmountToWithdrawButton_Click(object sender, EventArgs e)
         {
+            numToWithdraw = 0;
+            AmounfOf20sToWithdrawLabel.Text = 0.ToString();
             panel1.Hide();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        { 
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
-            int temp = (int) numericUpDown1.Value;
-            userNameLabel.Text = temp.ToString();
+
+        }
+
+        private void depositSlotButton_Click(object sender, EventArgs e)
+        {
+            DepositEnvelope();
+            System.Windows.Forms.MessageBox.Show("Envelope Deposited");
+        }
+
+        private void WithdrawConfirmationButton_Click(object sender, EventArgs e)
+        {
+            if (numToWithdraw != 0)
+            {
+                Withdraw(numToWithdraw, this.instanceAccount);
+                numToWithdraw = 0;
+                AmounfOf20sToWithdrawLabel.Text = 0.ToString();
+                panel1.Hide();
+            }
+            //Does nothing if submit 0
+            
+        }
+
+        private void AmounfOf20sToWithdrawLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Increase20sToWithdrawButton_Click(object sender, EventArgs e)
+        {
+            this.numToWithdraw += 1;
+            AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
+        }
+
+        private void Decrease20sToWithdrawButton_Click(object sender, EventArgs e)
+        {
+            if (numToWithdraw > 0)
+            {
+                this.numToWithdraw -= 1;
+            }
+
+            AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
         }
     }
 }

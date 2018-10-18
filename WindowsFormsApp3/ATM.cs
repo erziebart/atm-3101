@@ -26,7 +26,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                Console.WriteLine("Insufficient Bills");
+                System.Windows.Forms.MessageBox.Show("Insufficient Bills");
             }
         }
 
