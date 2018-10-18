@@ -32,6 +32,8 @@ namespace WindowsFormsApp3
             depositPanel.Hide();
             checkBalancePanel.Hide(); 
             numToWithdraw = 0;
+
+            disableWithdrawButtons();
         }
 
         public void Logout()
@@ -167,8 +169,11 @@ namespace WindowsFormsApp3
 
         private void Increase20sToWithdrawButton_Click(object sender, EventArgs e)
         {
-            this.numToWithdraw += 1;
-            AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
+            if(this.numToWithdraw < this.atm.getBill20Left())
+            {
+                this.numToWithdraw += 1;
+                AmounfOf20sToWithdrawLabel.Text = "$" + (20 * this.numToWithdraw).ToString();
+            }
         }
 
         private void Decrease20sToWithdrawButton_Click(object sender, EventArgs e)
@@ -178,7 +183,7 @@ namespace WindowsFormsApp3
                 this.numToWithdraw -= 1;
             }
 
-            AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
+            AmounfOf20sToWithdrawLabel.Text = "$" + (20 * this.numToWithdraw).ToString();
         }
 
     private void amountToDepositInput_KeyPress(object sender, KeyPressEventArgs e)
@@ -205,6 +210,59 @@ namespace WindowsFormsApp3
         private void balanceAmount_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void withdraw20_CheckedChanged(object sender, EventArgs e)
+        {
+            disableWithdrawButtons();
+            this.numToWithdraw = 1;
+            AmounfOf20sToWithdrawLabel.Text = "$" + (20 * this.numToWithdraw).ToString();
+        }
+
+        private void withdraw40_CheckedChanged(object sender, EventArgs e)
+        {
+            disableWithdrawButtons();
+            this.numToWithdraw = 2;
+            AmounfOf20sToWithdrawLabel.Text = "$" + (20*this.numToWithdraw).ToString();
+        }
+
+        private void withdraw60_CheckedChanged(object sender, EventArgs e)
+        {
+            disableWithdrawButtons();
+            this.numToWithdraw = 3;
+            AmounfOf20sToWithdrawLabel.Text = "$" + (20 * this.numToWithdraw).ToString();
+        }
+
+        private void withdraw80_CheckedChanged(object sender, EventArgs e)
+        {
+            disableWithdrawButtons();
+            this.numToWithdraw = 4;
+            AmounfOf20sToWithdrawLabel.Text = "$" + (20 * this.numToWithdraw).ToString();
+        }
+
+        private void withdraw100_CheckedChanged(object sender, EventArgs e)
+        {
+            disableWithdrawButtons();
+            this.numToWithdraw = 5;
+            AmounfOf20sToWithdrawLabel.Text = "$" + (20 * this.numToWithdraw).ToString();
+        }
+
+        private void withdrawOther_CheckedChanged(object sender, EventArgs e)
+        {
+            enableWithdrawButtons();
+            Increase20sToWithdrawButton.Enabled = true;
+            Decrease20sToWithdrawButton.Enabled = true;
+        }
+
+        private void disableWithdrawButtons()
+        {
+            Increase20sToWithdrawButton.Enabled = false;
+            Decrease20sToWithdrawButton.Enabled = false;
+        }
+        private void enableWithdrawButtons()
+        {
+            Increase20sToWithdrawButton.Enabled = true;
+            Decrease20sToWithdrawButton.Enabled = true;
         }
     }
 }

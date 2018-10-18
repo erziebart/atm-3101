@@ -35,6 +35,11 @@ namespace WindowsFormsApp3
             return accounts;
         }
 
+        public int getBill20Left()
+        {
+            return this.bill20sLeft;
+        }
+
   
     }
 }

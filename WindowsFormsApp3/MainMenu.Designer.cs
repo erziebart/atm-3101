@@ -160,7 +160,7 @@
             this.WithdrawPanel.Controls.Add(this.withdrawEnter);
             this.WithdrawPanel.Controls.Add(this.withdrawClose);
             this.WithdrawPanel.Controls.Add(this.amountToWithdrawText);
-            this.WithdrawPanel.Location = new System.Drawing.Point(12, 389);
+            this.WithdrawPanel.Location = new System.Drawing.Point(147, 121);
             this.WithdrawPanel.Name = "WithdrawPanel";
             this.WithdrawPanel.Size = new System.Drawing.Size(395, 236);
             this.WithdrawPanel.TabIndex = 10;
@@ -176,6 +176,7 @@
             this.withdrawOther.TabStop = true;
             this.withdrawOther.Text = "Other";
             this.withdrawOther.UseVisualStyleBackColor = true;
+            this.withdrawOther.CheckedChanged += new System.EventHandler(this.withdrawOther_CheckedChanged);
             // 
             // withdraw100
             // 
@@ -187,6 +188,7 @@
             this.withdraw100.TabStop = true;
             this.withdraw100.Text = "$100";
             this.withdraw100.UseVisualStyleBackColor = true;
+            this.withdraw100.CheckedChanged += new System.EventHandler(this.withdraw100_CheckedChanged);
             // 
             // withdraw80
             // 
@@ -198,6 +200,7 @@
             this.withdraw80.TabStop = true;
             this.withdraw80.Text = "$80";
             this.withdraw80.UseVisualStyleBackColor = true;
+            this.withdraw80.CheckedChanged += new System.EventHandler(this.withdraw80_CheckedChanged);
             // 
             // withdraw60
             // 
@@ -209,6 +212,7 @@
             this.withdraw60.TabStop = true;
             this.withdraw60.Text = "$60";
             this.withdraw60.UseVisualStyleBackColor = true;
+            this.withdraw60.CheckedChanged += new System.EventHandler(this.withdraw60_CheckedChanged);
             // 
             // withdraw40
             // 
@@ -220,6 +224,7 @@
             this.withdraw40.TabStop = true;
             this.withdraw40.Text = "$40";
             this.withdraw40.UseVisualStyleBackColor = true;
+            this.withdraw40.CheckedChanged += new System.EventHandler(this.withdraw40_CheckedChanged);
             // 
             // Decrease20sToWithdrawButton
             // 
@@ -251,11 +256,12 @@
             this.withdraw20.TabStop = true;
             this.withdraw20.Text = "$20";
             this.withdraw20.UseVisualStyleBackColor = true;
+            this.withdraw20.CheckedChanged += new System.EventHandler(this.withdraw20_CheckedChanged);
             // 
             // AmounfOf20sToWithdrawLabel
             // 
             this.AmounfOf20sToWithdrawLabel.AutoSize = true;
-            this.AmounfOf20sToWithdrawLabel.Location = new System.Drawing.Point(157, 150);
+            this.AmounfOf20sToWithdrawLabel.Location = new System.Drawing.Point(122, 152);
             this.AmounfOf20sToWithdrawLabel.Name = "AmounfOf20sToWithdrawLabel";
             this.AmounfOf20sToWithdrawLabel.Size = new System.Drawing.Size(13, 14);
             this.AmounfOf20sToWithdrawLabel.TabIndex = 4;
@@ -299,7 +305,7 @@
             this.depositPanel.Controls.Add(this.depositEnter);
             this.depositPanel.Controls.Add(this.depositClose);
             this.depositPanel.Controls.Add(this.amountToDepositText);
-            this.depositPanel.Location = new System.Drawing.Point(740, 25);
+            this.depositPanel.Location = new System.Drawing.Point(548, 45);
             this.depositPanel.Name = "depositPanel";
             this.depositPanel.Size = new System.Drawing.Size(392, 236);
             this.depositPanel.TabIndex = 15;
@@ -348,7 +354,7 @@
             this.checkBalancePanel.Controls.Add(this.balanceAmount);
             this.checkBalancePanel.Controls.Add(this.balanceClose);
             this.checkBalancePanel.Controls.Add(this.balanceText);
-            this.checkBalancePanel.Location = new System.Drawing.Point(138, 132);
+            this.checkBalancePanel.Location = new System.Drawing.Point(139, 363);
             this.checkBalancePanel.Name = "checkBalancePanel";
             this.checkBalancePanel.Size = new System.Drawing.Size(395, 236);
             this.checkBalancePanel.TabIndex = 17;
