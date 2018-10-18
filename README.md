@@ -18,6 +18,7 @@ them with the other portions of the system.
 Sam Muller - sjm2221
 I worked with Evan to plan out the general flow and components (e.g. classes and corresponding variables/methods) of the ATM. Specifically in the code, I wrote the JSON file, Account class, and AccountList class. I also helped implement the locking of acconts in Login. In the Main menu I did some work redesigning the UI. I added the Check Balance button and contributed to the designed of the Check Balance, Deposit, and Withdraw panels. However, other team members worked on the logic of each button/element within these panels.
 
-Name - Uni
+Evan Ziebart - erz2109
+I worked with Sam to plan out the project: classes, attributes, and functions, and wrote a specification that the team used to develop our atm. For my part, I handled development of the login menu UI and functionality, including account verification and locking. I was also the one in charge of managing the source control of the project as well as our code repository on github.
 
 Name - Uni
