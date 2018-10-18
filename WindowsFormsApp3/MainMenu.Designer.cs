@@ -52,7 +52,7 @@
       this.amountToWithdrawText = new System.Windows.Forms.Label();
       this.depositPanel = new System.Windows.Forms.Panel();
       this.checkBalancePanel = new System.Windows.Forms.Panel();
-      this.label7 = new System.Windows.Forms.Label();
+      this.balanceAmount = new System.Windows.Forms.Label();
       this.balanceClose = new System.Windows.Forms.Button();
       this.balanceText = new System.Windows.Forms.Label();
       this.amountToDepositInput = new System.Windows.Forms.TextBox();
@@ -160,7 +160,7 @@
       this.WithdrawPanel.Controls.Add(this.withdrawEnter);
       this.WithdrawPanel.Controls.Add(this.withdrawClose);
       this.WithdrawPanel.Controls.Add(this.amountToWithdrawText);
-      this.WithdrawPanel.Location = new System.Drawing.Point(138, 152);
+      this.WithdrawPanel.Location = new System.Drawing.Point(141, 146);
       this.WithdrawPanel.Name = "WithdrawPanel";
       this.WithdrawPanel.Size = new System.Drawing.Size(395, 236);
       this.WithdrawPanel.TabIndex = 10;
@@ -295,12 +295,11 @@
       // depositPanel
       // 
       this.depositPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-      this.depositPanel.Controls.Add(this.checkBalancePanel);
       this.depositPanel.Controls.Add(this.amountToDepositInput);
       this.depositPanel.Controls.Add(this.depositEnter);
       this.depositPanel.Controls.Add(this.depositClose);
       this.depositPanel.Controls.Add(this.amountToDepositText);
-      this.depositPanel.Location = new System.Drawing.Point(138, 155);
+      this.depositPanel.Location = new System.Drawing.Point(138, 149);
       this.depositPanel.Name = "depositPanel";
       this.depositPanel.Size = new System.Drawing.Size(392, 236);
       this.depositPanel.TabIndex = 15;
@@ -308,22 +307,22 @@
       // checkBalancePanel
       // 
       this.checkBalancePanel.BackColor = System.Drawing.SystemColors.ControlDark;
-      this.checkBalancePanel.Controls.Add(this.label7);
+      this.checkBalancePanel.Controls.Add(this.balanceAmount);
       this.checkBalancePanel.Controls.Add(this.balanceClose);
       this.checkBalancePanel.Controls.Add(this.balanceText);
-      this.checkBalancePanel.Location = new System.Drawing.Point(3, 0);
+      this.checkBalancePanel.Location = new System.Drawing.Point(144, 143);
       this.checkBalancePanel.Name = "checkBalancePanel";
       this.checkBalancePanel.Size = new System.Drawing.Size(395, 236);
       this.checkBalancePanel.TabIndex = 17;
       // 
-      // label7
+      // balanceAmount
       // 
-      this.label7.AutoSize = true;
-      this.label7.Location = new System.Drawing.Point(168, 115);
-      this.label7.Name = "label7";
-      this.label7.Size = new System.Drawing.Size(18, 19);
-      this.label7.TabIndex = 4;
-      this.label7.Text = "0";
+      this.balanceAmount.AutoSize = true;
+      this.balanceAmount.Location = new System.Drawing.Point(168, 115);
+      this.balanceAmount.Name = "balanceAmount";
+      this.balanceAmount.Size = new System.Drawing.Size(18, 19);
+      this.balanceAmount.TabIndex = 4;
+      this.balanceAmount.Text = "0";
       // 
       // balanceClose
       // 
@@ -397,8 +396,9 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.SystemColors.Menu;
       this.ClientSize = new System.Drawing.Size(800, 485);
-      this.Controls.Add(this.WithdrawPanel);
+      this.Controls.Add(this.checkBalancePanel);
       this.Controls.Add(this.depositPanel);
+      this.Controls.Add(this.WithdrawPanel);
       this.Controls.Add(this.button4);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.depositSlotButton);
@@ -447,7 +447,7 @@
     private System.Windows.Forms.Label amountToDepositText;
     private System.Windows.Forms.Button checkBalanceButton;
     private System.Windows.Forms.Panel checkBalancePanel;
-    private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.Label balanceAmount;
     private System.Windows.Forms.Button balanceClose;
     private System.Windows.Forms.Label balanceText;
     private System.Windows.Forms.RadioButton withdraw40;

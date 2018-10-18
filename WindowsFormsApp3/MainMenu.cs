@@ -134,7 +134,7 @@ namespace WindowsFormsApp3
         }
         private void checkBalanceButton_Click(object sender, EventArgs e)
         {
-          checkBalancePanel.Show();
+            checkBalancePanel.Show();
         }
         private void WithdrawConfirmationButton_Click(object sender, EventArgs e)
         {
@@ -170,25 +170,10 @@ namespace WindowsFormsApp3
             AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
         }
 
-    private void label6_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void button10_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void label_Click(object sender, EventArgs e)
-    {
-
-    }
-
     private void amountToDepositInput_KeyPress(object sender, KeyPressEventArgs e)
     {
       char ch = e.KeyChar;
-      if(ch == 46 && amountToDepositInput.Text.IndexOf('.') != 1)
+      if(ch == 46 && amountToDepositInput.Text.IndexOf('.') != -1)
       {
         e.Handled = true;
         return;
