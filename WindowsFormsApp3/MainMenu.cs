@@ -72,10 +72,10 @@ namespace WindowsFormsApp3
         //    DepositSlot.AcceptEnvelope();
         //}
 
-        //public void DispenseCash(int numBills)
-        //{
-        //    Dispenser.DispenseCash(numBills);
-        //}
+        public void DispenseCash(int numBills)
+        {
+            Dispenser.DispenseCash(numBills);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
