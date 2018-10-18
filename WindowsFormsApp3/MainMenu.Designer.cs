@@ -160,7 +160,7 @@
             this.WithdrawPanel.Controls.Add(this.withdrawEnter);
             this.WithdrawPanel.Controls.Add(this.withdrawClose);
             this.WithdrawPanel.Controls.Add(this.amountToWithdrawText);
-            this.WithdrawPanel.Location = new System.Drawing.Point(147, 121);
+            this.WithdrawPanel.Location = new System.Drawing.Point(139, 121);
             this.WithdrawPanel.Name = "WithdrawPanel";
             this.WithdrawPanel.Size = new System.Drawing.Size(395, 236);
             this.WithdrawPanel.TabIndex = 10;
@@ -305,7 +305,7 @@
             this.depositPanel.Controls.Add(this.depositEnter);
             this.depositPanel.Controls.Add(this.depositClose);
             this.depositPanel.Controls.Add(this.amountToDepositText);
-            this.depositPanel.Location = new System.Drawing.Point(548, 45);
+            this.depositPanel.Location = new System.Drawing.Point(138, 146);
             this.depositPanel.Name = "depositPanel";
             this.depositPanel.Size = new System.Drawing.Size(392, 236);
             this.depositPanel.TabIndex = 15;
@@ -354,7 +354,7 @@
             this.checkBalancePanel.Controls.Add(this.balanceAmount);
             this.checkBalancePanel.Controls.Add(this.balanceClose);
             this.checkBalancePanel.Controls.Add(this.balanceText);
-            this.checkBalancePanel.Location = new System.Drawing.Point(139, 363);
+            this.checkBalancePanel.Location = new System.Drawing.Point(138, 106);
             this.checkBalancePanel.Name = "checkBalancePanel";
             this.checkBalancePanel.Size = new System.Drawing.Size(395, 236);
             this.checkBalancePanel.TabIndex = 17;
