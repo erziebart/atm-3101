@@ -27,7 +27,9 @@ namespace WindowsFormsApp3
             this.atm = new ATM("accounts.json");
             label1.Text = "$" + this.instanceAccount.Balance.ToString();
             userNameLabel.Text = this.instanceAccount.CardNum;
-            panel1.Hide();
+            WithdrawPanel.Hide();
+            depositPanel.Hide();
+            checkBalancePanel.Hide(); 
             numToWithdraw = 0;
         }
 
@@ -77,17 +79,17 @@ namespace WindowsFormsApp3
             Dispenser.DispenseCash(numBills);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void depositButton_Click(object sender, EventArgs e)
         {
-            Deposit(60, this.instanceAccount);
+          depositPanel.Show();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void withdrawButton_Click(object sender, EventArgs e)
         {
-            panel1.Show();
+            WithdrawPanel.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void logoutButton_Click(object sender, EventArgs e)
         {
             Logout();
         }
@@ -100,7 +102,7 @@ namespace WindowsFormsApp3
         {
             numToWithdraw = 0;
             AmounfOf20sToWithdrawLabel.Text = 0.ToString();
-            panel1.Hide();
+            WithdrawPanel.Hide();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -118,7 +120,22 @@ namespace WindowsFormsApp3
         //    DepositEnvelope();
         //    System.Windows.Forms.MessageBox.Show("Envelope Deposited");
         //}
+        private void depositEnter_Click(object sender, EventArgs e)
+        {
+        }
+        private void depositClose_Click(object sender, EventArgs e)
+        {
+           depositPanel.Hide();
+        }
 
+        private void balanceClose_Click(object sender, EventArgs e)
+        {
+            checkBalancePanel.Hide(); 
+        }
+        private void checkBalanceButton_Click(object sender, EventArgs e)
+        {
+          checkBalancePanel.Show();
+        }
         private void WithdrawConfirmationButton_Click(object sender, EventArgs e)
         {
             if (numToWithdraw != 0)
@@ -126,7 +143,7 @@ namespace WindowsFormsApp3
                 Withdraw(numToWithdraw, this.instanceAccount);
                 numToWithdraw = 0;
                 AmounfOf20sToWithdrawLabel.Text = 0.ToString();
-                panel1.Hide();
+                WithdrawPanel.Hide();
             }
             //Does nothing if submit 0
             
@@ -152,5 +169,35 @@ namespace WindowsFormsApp3
 
             AmounfOf20sToWithdrawLabel.Text = this.numToWithdraw.ToString();
         }
+
+    private void label6_Click(object sender, EventArgs e)
+    {
+
     }
+
+    private void button10_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void label_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void amountToDepositInput_KeyPress(object sender, KeyPressEventArgs e)
+    {
+      char ch = e.KeyChar;
+      if(ch == 46 && amountToDepositInput.Text.IndexOf('.') != 1)
+      {
+        e.Handled = true;
+        return;
+      }
+
+      if(!Char.IsDigit(ch) && ch != 8 && ch != 46)
+      {
+        e.Handled = true;
+      }
+    }
+  }
 }

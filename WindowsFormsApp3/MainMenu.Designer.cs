@@ -28,229 +28,435 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.userNameLabel = new System.Windows.Forms.Label();
-            this.depositSlotButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Decrease20sToWithdrawButton = new System.Windows.Forms.Button();
-            this.Increase20sToWithdrawButton = new System.Windows.Forms.Button();
-            this.AmounfOf20sToWithdrawLabel = new System.Windows.Forms.Label();
-            this.WithdrawConfirmationButton = new System.Windows.Forms.Button();
-            this.closeAmountToWithdrawButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(194, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 67);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Deposit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 14);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "<balance>";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(371, 235);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 67);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Withdraw";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(715, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 25);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Logout";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 14);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Account balance:";
-            // 
-            // userNameLabel
-            // 
-            this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Location = new System.Drawing.Point(68, 9);
-            this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(71, 14);
-            this.userNameLabel.TabIndex = 6;
-            this.userNameLabel.Text = "<user-name>";
-            // 
-            // depositSlotButton
-            // 
-            //this.depositSlotButton.Location = new System.Drawing.Point(715, 68);
-            //this.depositSlotButton.Name = "depositSlotButton";
-            //this.depositSlotButton.Size = new System.Drawing.Size(18, 401);
-            //this.depositSlotButton.TabIndex = 7;
-            //this.depositSlotButton.Text = "Envelope";
-            //this.depositSlotButton.UseVisualStyleBackColor = true;
-            //this.depositSlotButton.Click += new System.EventHandler(this.depositSlotButton_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 14);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Account id:";
-            // 
-            // button4
-            // 
-            //this.button4.Location = new System.Drawing.Point(194, 369);
-            //this.button4.Name = "button4";
-            //this.button4.Size = new System.Drawing.Size(289, 99);
-            //this.button4.TabIndex = 9;
-            //this.button4.Text = "Dispenser";
-            //this.button4.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.Decrease20sToWithdrawButton);
-            this.panel1.Controls.Add(this.Increase20sToWithdrawButton);
-            this.panel1.Controls.Add(this.AmounfOf20sToWithdrawLabel);
-            this.panel1.Controls.Add(this.WithdrawConfirmationButton);
-            this.panel1.Controls.Add(this.closeAmountToWithdrawButton);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(194, 132);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 208);
-            this.panel1.TabIndex = 10;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // Decrease20sToWithdrawButton
-            // 
-            this.Decrease20sToWithdrawButton.Location = new System.Drawing.Point(177, 144);
-            this.Decrease20sToWithdrawButton.Name = "Decrease20sToWithdrawButton";
-            this.Decrease20sToWithdrawButton.Size = new System.Drawing.Size(75, 25);
-            this.Decrease20sToWithdrawButton.TabIndex = 6;
-            this.Decrease20sToWithdrawButton.Text = "-";
-            this.Decrease20sToWithdrawButton.UseVisualStyleBackColor = true;
-            this.Decrease20sToWithdrawButton.Click += new System.EventHandler(this.Decrease20sToWithdrawButton_Click);
-            // 
-            // Increase20sToWithdrawButton
-            // 
-            this.Increase20sToWithdrawButton.Location = new System.Drawing.Point(82, 144);
-            this.Increase20sToWithdrawButton.Name = "Increase20sToWithdrawButton";
-            this.Increase20sToWithdrawButton.Size = new System.Drawing.Size(75, 25);
-            this.Increase20sToWithdrawButton.TabIndex = 5;
-            this.Increase20sToWithdrawButton.Text = "+";
-            this.Increase20sToWithdrawButton.UseVisualStyleBackColor = true;
-            this.Increase20sToWithdrawButton.Click += new System.EventHandler(this.Increase20sToWithdrawButton_Click);
-            // 
-            // AmounfOf20sToWithdrawLabel
-            // 
-            this.AmounfOf20sToWithdrawLabel.AutoSize = true;
-            this.AmounfOf20sToWithdrawLabel.Location = new System.Drawing.Point(97, 82);
-            this.AmounfOf20sToWithdrawLabel.Name = "AmounfOf20sToWithdrawLabel";
-            this.AmounfOf20sToWithdrawLabel.Size = new System.Drawing.Size(13, 14);
-            this.AmounfOf20sToWithdrawLabel.TabIndex = 4;
-            this.AmounfOf20sToWithdrawLabel.Text = "0";
-            this.AmounfOf20sToWithdrawLabel.Click += new System.EventHandler(this.AmounfOf20sToWithdrawLabel_Click);
-            // 
-            // WithdrawConfirmationButton
-            // 
-            this.WithdrawConfirmationButton.Location = new System.Drawing.Point(234, 180);
-            this.WithdrawConfirmationButton.Name = "WithdrawConfirmationButton";
-            this.WithdrawConfirmationButton.Size = new System.Drawing.Size(75, 25);
-            this.WithdrawConfirmationButton.TabIndex = 3;
-            this.WithdrawConfirmationButton.Text = "Withdraw";
-            this.WithdrawConfirmationButton.UseVisualStyleBackColor = true;
-            this.WithdrawConfirmationButton.Click += new System.EventHandler(this.WithdrawConfirmationButton_Click);
-            // 
-            // closeAmountToWithdrawButton
-            // 
-            this.closeAmountToWithdrawButton.Location = new System.Drawing.Point(234, 3);
-            this.closeAmountToWithdrawButton.Name = "closeAmountToWithdrawButton";
-            this.closeAmountToWithdrawButton.Size = new System.Drawing.Size(75, 25);
-            this.closeAmountToWithdrawButton.TabIndex = 2;
-            this.closeAmountToWithdrawButton.Text = "Close";
-            this.closeAmountToWithdrawButton.UseVisualStyleBackColor = true;
-            this.closeAmountToWithdrawButton.Click += new System.EventHandler(this.closeAmountToWithdrawButton_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 14);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Amount of 20\'s to withdraw";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // MainMenu
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(800, 485);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.depositSlotButton);
-            this.Controls.Add(this.userNameLabel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "MainMenu";
-            this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+      this.depositButton = new System.Windows.Forms.Button();
+      this.label1 = new System.Windows.Forms.Label();
+      this.withdrawButton = new System.Windows.Forms.Button();
+      this.logoutButton = new System.Windows.Forms.Button();
+      this.label2 = new System.Windows.Forms.Label();
+      this.userNameLabel = new System.Windows.Forms.Label();
+      this.depositSlotButton = new System.Windows.Forms.Button();
+      this.label3 = new System.Windows.Forms.Label();
+      this.button4 = new System.Windows.Forms.Button();
+      this.WithdrawPanel = new System.Windows.Forms.Panel();
+      this.withdrawOther = new System.Windows.Forms.RadioButton();
+      this.withdraw100 = new System.Windows.Forms.RadioButton();
+      this.withdraw80 = new System.Windows.Forms.RadioButton();
+      this.withdraw60 = new System.Windows.Forms.RadioButton();
+      this.withdraw40 = new System.Windows.Forms.RadioButton();
+      this.Decrease20sToWithdrawButton = new System.Windows.Forms.Button();
+      this.Increase20sToWithdrawButton = new System.Windows.Forms.Button();
+      this.withdraw20 = new System.Windows.Forms.RadioButton();
+      this.AmounfOf20sToWithdrawLabel = new System.Windows.Forms.Label();
+      this.withdrawEnter = new System.Windows.Forms.Button();
+      this.withdrawClose = new System.Windows.Forms.Button();
+      this.amountToWithdrawText = new System.Windows.Forms.Label();
+      this.depositPanel = new System.Windows.Forms.Panel();
+      this.checkBalancePanel = new System.Windows.Forms.Panel();
+      this.label7 = new System.Windows.Forms.Label();
+      this.balanceClose = new System.Windows.Forms.Button();
+      this.balanceText = new System.Windows.Forms.Label();
+      this.amountToDepositInput = new System.Windows.Forms.TextBox();
+      this.depositEnter = new System.Windows.Forms.Button();
+      this.depositClose = new System.Windows.Forms.Button();
+      this.amountToDepositText = new System.Windows.Forms.Label();
+      this.checkBalanceButton = new System.Windows.Forms.Button();
+      this.WithdrawPanel.SuspendLayout();
+      this.depositPanel.SuspendLayout();
+      this.checkBalancePanel.SuspendLayout();
+      this.SuspendLayout();
+      // 
+      // depositButton
+      // 
+      this.depositButton.Location = new System.Drawing.Point(272, 242);
+      this.depositButton.Name = "depositButton";
+      this.depositButton.Size = new System.Drawing.Size(112, 67);
+      this.depositButton.TabIndex = 0;
+      this.depositButton.Text = "Deposit";
+      this.depositButton.UseVisualStyleBackColor = true;
+      this.depositButton.Click += new System.EventHandler(this.depositButton_Click);
+      // 
+      // label1
+      // 
+      this.label1.AutoSize = true;
+      this.label1.Location = new System.Drawing.Point(97, 25);
+      this.label1.Name = "label1";
+      this.label1.Size = new System.Drawing.Size(86, 19);
+      this.label1.TabIndex = 1;
+      this.label1.Text = "<balance>";
+      // 
+      // withdrawButton
+      // 
+      this.withdrawButton.Location = new System.Drawing.Point(405, 241);
+      this.withdrawButton.Name = "withdrawButton";
+      this.withdrawButton.Size = new System.Drawing.Size(112, 67);
+      this.withdrawButton.TabIndex = 2;
+      this.withdrawButton.Text = "Withdraw";
+      this.withdrawButton.UseVisualStyleBackColor = true;
+      this.withdrawButton.Click += new System.EventHandler(this.withdrawButton_Click);
+      // 
+      // logoutButton
+      // 
+      this.logoutButton.Location = new System.Drawing.Point(715, 14);
+      this.logoutButton.Name = "logoutButton";
+      this.logoutButton.Size = new System.Drawing.Size(75, 25);
+      this.logoutButton.TabIndex = 4;
+      this.logoutButton.Text = "Logout";
+      this.logoutButton.UseVisualStyleBackColor = true;
+      this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+      // 
+      // label2
+      // 
+      this.label2.AutoSize = true;
+      this.label2.Location = new System.Drawing.Point(0, 25);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(136, 19);
+      this.label2.TabIndex = 5;
+      this.label2.Text = "Account balance:";
+      // 
+      // userNameLabel
+      // 
+      this.userNameLabel.AutoSize = true;
+      this.userNameLabel.Location = new System.Drawing.Point(68, 9);
+      this.userNameLabel.Name = "userNameLabel";
+      this.userNameLabel.Size = new System.Drawing.Size(107, 19);
+      this.userNameLabel.TabIndex = 6;
+      this.userNameLabel.Text = "<user-name>";
+      // 
+      // depositSlotButton
+      // 
+      this.depositSlotButton.Location = new System.Drawing.Point(0, 0);
+      this.depositSlotButton.Name = "depositSlotButton";
+      this.depositSlotButton.Size = new System.Drawing.Size(75, 23);
+      this.depositSlotButton.TabIndex = 12;
+      // 
+      // label3
+      // 
+      this.label3.AutoSize = true;
+      this.label3.Location = new System.Drawing.Point(0, 10);
+      this.label3.Name = "label3";
+      this.label3.Size = new System.Drawing.Size(92, 19);
+      this.label3.TabIndex = 8;
+      this.label3.Text = "Account id:";
+      // 
+      // button4
+      // 
+      this.button4.Location = new System.Drawing.Point(0, 0);
+      this.button4.Name = "button4";
+      this.button4.Size = new System.Drawing.Size(75, 23);
+      this.button4.TabIndex = 11;
+      // 
+      // WithdrawPanel
+      // 
+      this.WithdrawPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+      this.WithdrawPanel.Controls.Add(this.withdrawOther);
+      this.WithdrawPanel.Controls.Add(this.withdraw100);
+      this.WithdrawPanel.Controls.Add(this.withdraw80);
+      this.WithdrawPanel.Controls.Add(this.withdraw60);
+      this.WithdrawPanel.Controls.Add(this.withdraw40);
+      this.WithdrawPanel.Controls.Add(this.Decrease20sToWithdrawButton);
+      this.WithdrawPanel.Controls.Add(this.Increase20sToWithdrawButton);
+      this.WithdrawPanel.Controls.Add(this.withdraw20);
+      this.WithdrawPanel.Controls.Add(this.AmounfOf20sToWithdrawLabel);
+      this.WithdrawPanel.Controls.Add(this.withdrawEnter);
+      this.WithdrawPanel.Controls.Add(this.withdrawClose);
+      this.WithdrawPanel.Controls.Add(this.amountToWithdrawText);
+      this.WithdrawPanel.Location = new System.Drawing.Point(138, 152);
+      this.WithdrawPanel.Name = "WithdrawPanel";
+      this.WithdrawPanel.Size = new System.Drawing.Size(395, 236);
+      this.WithdrawPanel.TabIndex = 10;
+      this.WithdrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+      // 
+      // withdrawOther
+      // 
+      this.withdrawOther.AutoSize = true;
+      this.withdrawOther.Location = new System.Drawing.Point(200, 102);
+      this.withdrawOther.Name = "withdrawOther";
+      this.withdrawOther.Size = new System.Drawing.Size(74, 23);
+      this.withdrawOther.TabIndex = 8;
+      this.withdrawOther.TabStop = true;
+      this.withdrawOther.Text = "Other";
+      this.withdrawOther.UseVisualStyleBackColor = true;
+      // 
+      // withdraw100
+      // 
+      this.withdraw100.AutoSize = true;
+      this.withdraw100.Location = new System.Drawing.Point(200, 73);
+      this.withdraw100.Name = "withdraw100";
+      this.withdraw100.Size = new System.Drawing.Size(70, 23);
+      this.withdraw100.TabIndex = 9;
+      this.withdraw100.TabStop = true;
+      this.withdraw100.Text = "$100";
+      this.withdraw100.UseVisualStyleBackColor = true;
+      // 
+      // withdraw80
+      // 
+      this.withdraw80.AutoSize = true;
+      this.withdraw80.Location = new System.Drawing.Point(200, 42);
+      this.withdraw80.Name = "withdraw80";
+      this.withdraw80.Size = new System.Drawing.Size(61, 23);
+      this.withdraw80.TabIndex = 7;
+      this.withdraw80.TabStop = true;
+      this.withdraw80.Text = "$80";
+      this.withdraw80.UseVisualStyleBackColor = true;
+      // 
+      // withdraw60
+      // 
+      this.withdraw60.AutoSize = true;
+      this.withdraw60.Location = new System.Drawing.Point(124, 102);
+      this.withdraw60.Name = "withdraw60";
+      this.withdraw60.Size = new System.Drawing.Size(61, 23);
+      this.withdraw60.TabIndex = 5;
+      this.withdraw60.TabStop = true;
+      this.withdraw60.Text = "$60";
+      this.withdraw60.UseVisualStyleBackColor = true;
+      // 
+      // withdraw40
+      // 
+      this.withdraw40.AutoSize = true;
+      this.withdraw40.Location = new System.Drawing.Point(124, 73);
+      this.withdraw40.Name = "withdraw40";
+      this.withdraw40.Size = new System.Drawing.Size(61, 23);
+      this.withdraw40.TabIndex = 6;
+      this.withdraw40.TabStop = true;
+      this.withdraw40.Text = "$40";
+      this.withdraw40.UseVisualStyleBackColor = true;
+      // 
+      // Decrease20sToWithdrawButton
+      // 
+      this.Decrease20sToWithdrawButton.Location = new System.Drawing.Point(216, 147);
+      this.Decrease20sToWithdrawButton.Name = "Decrease20sToWithdrawButton";
+      this.Decrease20sToWithdrawButton.Size = new System.Drawing.Size(27, 25);
+      this.Decrease20sToWithdrawButton.TabIndex = 6;
+      this.Decrease20sToWithdrawButton.Text = "-";
+      this.Decrease20sToWithdrawButton.UseVisualStyleBackColor = true;
+      this.Decrease20sToWithdrawButton.Click += new System.EventHandler(this.Decrease20sToWithdrawButton_Click);
+      // 
+      // Increase20sToWithdrawButton
+      // 
+      this.Increase20sToWithdrawButton.Location = new System.Drawing.Point(181, 147);
+      this.Increase20sToWithdrawButton.Name = "Increase20sToWithdrawButton";
+      this.Increase20sToWithdrawButton.Size = new System.Drawing.Size(29, 25);
+      this.Increase20sToWithdrawButton.TabIndex = 5;
+      this.Increase20sToWithdrawButton.Text = "+";
+      this.Increase20sToWithdrawButton.UseVisualStyleBackColor = true;
+      this.Increase20sToWithdrawButton.Click += new System.EventHandler(this.Increase20sToWithdrawButton_Click);
+      // 
+      // withdraw20
+      // 
+      this.withdraw20.AutoSize = true;
+      this.withdraw20.Location = new System.Drawing.Point(124, 42);
+      this.withdraw20.Name = "withdraw20";
+      this.withdraw20.Size = new System.Drawing.Size(61, 23);
+      this.withdraw20.TabIndex = 4;
+      this.withdraw20.TabStop = true;
+      this.withdraw20.Text = "$20";
+      this.withdraw20.UseVisualStyleBackColor = true;
+      // 
+      // AmounfOf20sToWithdrawLabel
+      // 
+      this.AmounfOf20sToWithdrawLabel.AutoSize = true;
+      this.AmounfOf20sToWithdrawLabel.Location = new System.Drawing.Point(157, 150);
+      this.AmounfOf20sToWithdrawLabel.Name = "AmounfOf20sToWithdrawLabel";
+      this.AmounfOf20sToWithdrawLabel.Size = new System.Drawing.Size(18, 19);
+      this.AmounfOf20sToWithdrawLabel.TabIndex = 4;
+      this.AmounfOf20sToWithdrawLabel.Text = "0";
+      this.AmounfOf20sToWithdrawLabel.Click += new System.EventHandler(this.AmounfOf20sToWithdrawLabel_Click);
+      // 
+      // withdrawEnter
+      // 
+      this.withdrawEnter.Location = new System.Drawing.Point(143, 196);
+      this.withdrawEnter.Name = "withdrawEnter";
+      this.withdrawEnter.Size = new System.Drawing.Size(104, 25);
+      this.withdrawEnter.TabIndex = 3;
+      this.withdrawEnter.Text = "Withdraw";
+      this.withdrawEnter.UseVisualStyleBackColor = true;
+      this.withdrawEnter.Click += new System.EventHandler(this.WithdrawConfirmationButton_Click);
+      // 
+      // withdrawClose
+      // 
+      this.withdrawClose.Location = new System.Drawing.Point(312, 6);
+      this.withdrawClose.Name = "withdrawClose";
+      this.withdrawClose.Size = new System.Drawing.Size(75, 25);
+      this.withdrawClose.TabIndex = 2;
+      this.withdrawClose.Text = "Close";
+      this.withdrawClose.UseVisualStyleBackColor = true;
+      this.withdrawClose.Click += new System.EventHandler(this.closeAmountToWithdrawButton_Click);
+      // 
+      // amountToWithdrawText
+      // 
+      this.amountToWithdrawText.AutoSize = true;
+      this.amountToWithdrawText.Location = new System.Drawing.Point(120, 9);
+      this.amountToWithdrawText.Name = "amountToWithdrawText";
+      this.amountToWithdrawText.Size = new System.Drawing.Size(150, 19);
+      this.amountToWithdrawText.TabIndex = 1;
+      this.amountToWithdrawText.Text = "Amount to withdraw";
+      this.amountToWithdrawText.Click += new System.EventHandler(this.label4_Click);
+      // 
+      // depositPanel
+      // 
+      this.depositPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+      this.depositPanel.Controls.Add(this.checkBalancePanel);
+      this.depositPanel.Controls.Add(this.amountToDepositInput);
+      this.depositPanel.Controls.Add(this.depositEnter);
+      this.depositPanel.Controls.Add(this.depositClose);
+      this.depositPanel.Controls.Add(this.amountToDepositText);
+      this.depositPanel.Location = new System.Drawing.Point(138, 155);
+      this.depositPanel.Name = "depositPanel";
+      this.depositPanel.Size = new System.Drawing.Size(392, 236);
+      this.depositPanel.TabIndex = 15;
+      // 
+      // checkBalancePanel
+      // 
+      this.checkBalancePanel.BackColor = System.Drawing.SystemColors.ControlDark;
+      this.checkBalancePanel.Controls.Add(this.label7);
+      this.checkBalancePanel.Controls.Add(this.balanceClose);
+      this.checkBalancePanel.Controls.Add(this.balanceText);
+      this.checkBalancePanel.Location = new System.Drawing.Point(3, 0);
+      this.checkBalancePanel.Name = "checkBalancePanel";
+      this.checkBalancePanel.Size = new System.Drawing.Size(395, 236);
+      this.checkBalancePanel.TabIndex = 17;
+      // 
+      // label7
+      // 
+      this.label7.AutoSize = true;
+      this.label7.Location = new System.Drawing.Point(168, 115);
+      this.label7.Name = "label7";
+      this.label7.Size = new System.Drawing.Size(18, 19);
+      this.label7.TabIndex = 4;
+      this.label7.Text = "0";
+      // 
+      // balanceClose
+      // 
+      this.balanceClose.Location = new System.Drawing.Point(312, 9);
+      this.balanceClose.Name = "balanceClose";
+      this.balanceClose.Size = new System.Drawing.Size(75, 25);
+      this.balanceClose.TabIndex = 2;
+      this.balanceClose.Text = "Close";
+      this.balanceClose.UseVisualStyleBackColor = true;
+      this.balanceClose.Click += new System.EventHandler(this.balanceClose_Click);
+      // 
+      // balanceText
+      // 
+      this.balanceText.AutoSize = true;
+      this.balanceText.Location = new System.Drawing.Point(168, 90);
+      this.balanceText.Name = "balanceText";
+      this.balanceText.Size = new System.Drawing.Size(68, 19);
+      this.balanceText.TabIndex = 1;
+      this.balanceText.Text = "Balance";
+      // 
+      // amountToDepositInput
+      // 
+      this.amountToDepositInput.Location = new System.Drawing.Point(154, 107);
+      this.amountToDepositInput.Name = "amountToDepositInput";
+      this.amountToDepositInput.Size = new System.Drawing.Size(100, 26);
+      this.amountToDepositInput.TabIndex = 4;
+      this.amountToDepositInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountToDepositInput_KeyPress);
+      // 
+      // depositEnter
+      // 
+      this.depositEnter.Location = new System.Drawing.Point(168, 172);
+      this.depositEnter.Name = "depositEnter";
+      this.depositEnter.Size = new System.Drawing.Size(75, 25);
+      this.depositEnter.TabIndex = 3;
+      this.depositEnter.Text = "Deposit";
+      this.depositEnter.UseVisualStyleBackColor = true;
+      this.depositEnter.Click += new System.EventHandler(this.depositEnter_Click);
+      // 
+      // depositClose
+      // 
+      this.depositClose.Location = new System.Drawing.Point(312, 9);
+      this.depositClose.Name = "depositClose";
+      this.depositClose.Size = new System.Drawing.Size(75, 25);
+      this.depositClose.TabIndex = 2;
+      this.depositClose.Text = "Close";
+      this.depositClose.UseVisualStyleBackColor = true;
+      this.depositClose.Click += new System.EventHandler(this.depositClose_Click);
+      // 
+      // amountToDepositText
+      // 
+      this.amountToDepositText.AutoSize = true;
+      this.amountToDepositText.Location = new System.Drawing.Point(138, 63);
+      this.amountToDepositText.Name = "amountToDepositText";
+      this.amountToDepositText.Size = new System.Drawing.Size(142, 19);
+      this.amountToDepositText.TabIndex = 1;
+      this.amountToDepositText.Text = "Amount to Deposit";
+      // 
+      // checkBalanceButton
+      // 
+      this.checkBalanceButton.Location = new System.Drawing.Point(138, 242);
+      this.checkBalanceButton.Name = "checkBalanceButton";
+      this.checkBalanceButton.Size = new System.Drawing.Size(112, 67);
+      this.checkBalanceButton.TabIndex = 16;
+      this.checkBalanceButton.Text = "Check Balance";
+      this.checkBalanceButton.UseVisualStyleBackColor = true;
+      this.checkBalanceButton.Click += new System.EventHandler(this.checkBalanceButton_Click);
+      // 
+      // MainMenu
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BackColor = System.Drawing.SystemColors.Menu;
+      this.ClientSize = new System.Drawing.Size(800, 485);
+      this.Controls.Add(this.WithdrawPanel);
+      this.Controls.Add(this.depositPanel);
+      this.Controls.Add(this.button4);
+      this.Controls.Add(this.label3);
+      this.Controls.Add(this.depositSlotButton);
+      this.Controls.Add(this.userNameLabel);
+      this.Controls.Add(this.label2);
+      this.Controls.Add(this.logoutButton);
+      this.Controls.Add(this.withdrawButton);
+      this.Controls.Add(this.label1);
+      this.Controls.Add(this.depositButton);
+      this.Controls.Add(this.checkBalanceButton);
+      this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.Name = "MainMenu";
+      this.Text = "Form1";
+      this.WithdrawPanel.ResumeLayout(false);
+      this.WithdrawPanel.PerformLayout();
+      this.depositPanel.ResumeLayout(false);
+      this.depositPanel.PerformLayout();
+      this.checkBalancePanel.ResumeLayout(false);
+      this.checkBalancePanel.PerformLayout();
+      this.ResumeLayout(false);
+      this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button depositButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button withdrawButton;
+        private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.Button depositSlotButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button closeAmountToWithdrawButton;
-        private System.Windows.Forms.Button WithdrawConfirmationButton;
+        private System.Windows.Forms.Panel WithdrawPanel;
+        private System.Windows.Forms.Label amountToWithdrawText;
+        private System.Windows.Forms.Button withdrawClose;
+        private System.Windows.Forms.Button withdrawEnter;
         private System.Windows.Forms.Label AmounfOf20sToWithdrawLabel;
         private System.Windows.Forms.Button Increase20sToWithdrawButton;
         private System.Windows.Forms.Button Decrease20sToWithdrawButton;
-    }
+    private System.Windows.Forms.Panel depositPanel;
+    private System.Windows.Forms.Button depositEnter;
+    private System.Windows.Forms.Button depositClose;
+    private System.Windows.Forms.Label amountToDepositText;
+    private System.Windows.Forms.Button checkBalanceButton;
+    private System.Windows.Forms.Panel checkBalancePanel;
+    private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.Button balanceClose;
+    private System.Windows.Forms.Label balanceText;
+    private System.Windows.Forms.RadioButton withdraw40;
+    private System.Windows.Forms.RadioButton withdraw60;
+    private System.Windows.Forms.RadioButton withdraw20;
+    private System.Windows.Forms.RadioButton withdrawOther;
+    private System.Windows.Forms.RadioButton withdraw100;
+    private System.Windows.Forms.RadioButton withdraw80;
+    private System.Windows.Forms.TextBox amountToDepositInput;
+  }
 }
 
