@@ -144,6 +144,7 @@ namespace WindowsFormsApp3
         }
         private void checkBalanceButton_Click(object sender, EventArgs e)
         {
+            balanceAmount.Text = "$" + this.instanceAccount.Balance.ToString();
             checkBalancePanel.Show();
         }
         private void WithdrawConfirmationButton_Click(object sender, EventArgs e)
@@ -195,5 +196,15 @@ namespace WindowsFormsApp3
       }
 
     }
+
+        private void depositPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void balanceAmount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

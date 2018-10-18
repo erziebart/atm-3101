@@ -160,7 +160,7 @@
             this.WithdrawPanel.Controls.Add(this.withdrawEnter);
             this.WithdrawPanel.Controls.Add(this.withdrawClose);
             this.WithdrawPanel.Controls.Add(this.amountToWithdrawText);
-            this.WithdrawPanel.Location = new System.Drawing.Point(141, 146);
+            this.WithdrawPanel.Location = new System.Drawing.Point(12, 389);
             this.WithdrawPanel.Name = "WithdrawPanel";
             this.WithdrawPanel.Size = new System.Drawing.Size(395, 236);
             this.WithdrawPanel.TabIndex = 10;
@@ -299,10 +299,11 @@
             this.depositPanel.Controls.Add(this.depositEnter);
             this.depositPanel.Controls.Add(this.depositClose);
             this.depositPanel.Controls.Add(this.amountToDepositText);
-            this.depositPanel.Location = new System.Drawing.Point(138, 149);
+            this.depositPanel.Location = new System.Drawing.Point(740, 25);
             this.depositPanel.Name = "depositPanel";
             this.depositPanel.Size = new System.Drawing.Size(392, 236);
             this.depositPanel.TabIndex = 15;
+            this.depositPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.depositPanel_Paint);
             // 
             // amountToDepositInput
             // 
@@ -347,7 +348,7 @@
             this.checkBalancePanel.Controls.Add(this.balanceAmount);
             this.checkBalancePanel.Controls.Add(this.balanceClose);
             this.checkBalancePanel.Controls.Add(this.balanceText);
-            this.checkBalancePanel.Location = new System.Drawing.Point(144, 143);
+            this.checkBalancePanel.Location = new System.Drawing.Point(138, 132);
             this.checkBalancePanel.Name = "checkBalancePanel";
             this.checkBalancePanel.Size = new System.Drawing.Size(395, 236);
             this.checkBalancePanel.TabIndex = 17;
@@ -360,6 +361,7 @@
             this.balanceAmount.Size = new System.Drawing.Size(13, 14);
             this.balanceAmount.TabIndex = 4;
             this.balanceAmount.Text = "0";
+            this.balanceAmount.Click += new System.EventHandler(this.balanceAmount_Click);
             // 
             // balanceClose
             // 
