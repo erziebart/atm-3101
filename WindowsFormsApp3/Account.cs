@@ -9,7 +9,7 @@ namespace WindowsFormsApp3
     {
         public string CardNum { get; set; }
         public string Pin { get; set; }
-        public double LastTimeAccessed { get; set; }
+        public double LoginAttempts { get; set; }
         public bool IsLocked { get; set; }
         public double Balance { get; set; }
 
@@ -17,14 +17,14 @@ namespace WindowsFormsApp3
         {
             this.CardNum = c;
             this.Pin = p;
-            this.LastTimeAccessed = t;
+            this.LoginAttempts = t;
             this.IsLocked = l;
             this.Balance = b;
         }
         public Account() {
             this.CardNum = "";
             this.Pin = "";
-            this.LastTimeAccessed = 0.0;
+            this.LoginAttempts = 0.0;
             this.IsLocked = false;
             this.Balance = 0.0;
         }
@@ -47,6 +47,16 @@ namespace WindowsFormsApp3
         // Subtract specified amount from account balance
         public void Withdraw(double x) {
             this.Balance -= x;
+        }
+
+        // Increase login attempts by one
+        public void AddLoginAttempt() {
+            this.LoginAttempts += 1;
+        }
+
+        // Clears log in attempts
+        public void ClearLoginAttempts() {
+            this.LoginAttempts = 0;
         }
     }
 }

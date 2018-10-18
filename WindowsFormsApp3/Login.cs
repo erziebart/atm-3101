@@ -52,18 +52,32 @@ namespace WindowsFormsApp3
         if (IsValidLogin(user, pin))
         {
           // open the user's main menu screen
+          user.ClearLoginAttempts();
+          db.UpdateAcct(user);
           OpenMainMenu(user);
         }
         else
         {
-          // lock the user account and update in database
-          user.Lock();
-          db.UpdateAcct(user);
+          // Check # login attempts
+          if (user.LoginAttempts >= 2) {
+            // lock the user account and update in database
+            user.Lock();
+            db.UpdateAcct(user);
+            MessageBox.Show("Please contact your bank.", "Account Locked", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Console.WriteLine("Your account has been locked due to too many failed login attempts. Please contact your bank");
+          }
+          else {
+            user.AddLoginAttempt();
+            db.UpdateAcct(user);
+            MessageBox.Show("This account has "+user.LoginAttempts+" failed login attempts. After 3 failed logins, your account will be locked.", "Invalid PIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Console.WriteLine("Invalid PIN");
+          }
         }
       }
       else
       {
         // the account does not exist
+        MessageBox.Show("Please try again.", "Account not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
         Console.WriteLine("Account not found");
       }
     }

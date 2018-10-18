@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+[
+  {
+    "CardNum": "123456781234",
+    "Pin": "1234",
+    "LoginAttempts": 0.0,
+    "IsLocked": false,
+    "Balance": 1.0
+  },
+  {
+    "CardNum": "876543218765",
+    "Pin": "8765",
+    "LoginAttempts": 0.0,
+    "IsLocked": false,
+    "Balance": 400.0
+  }
+=======
 [
   {
     "CardNum": "876543218765",
@@ -20,4 +37,5 @@
     "IsLocked": false,
     "Balance": 425.0
   }
+>>>>>>> 30034840446b08f6cbfbb2e46ed398367d8a08f6
 ]
