@@ -67,15 +67,15 @@ namespace WindowsFormsApp3
                 System.Windows.Forms.MessageBox.Show("Insufficient acount funds");
             }
         }
-        public void DepositEnvelope()
-        {
-            DepositSlot.AcceptEnvelope();
-        }
+        //public void DepositEnvelope()
+        //{
+        //    DepositSlot.AcceptEnvelope();
+        //}
 
-        public void DispenseCash(int numBills)
-        {
-            Dispenser.DispenseCash(numBills);
-        }
+        //public void DispenseCash(int numBills)
+        //{
+        //    Dispenser.DispenseCash(numBills);
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -113,11 +113,11 @@ namespace WindowsFormsApp3
 
         }
 
-        private void depositSlotButton_Click(object sender, EventArgs e)
-        {
-            DepositEnvelope();
-            System.Windows.Forms.MessageBox.Show("Envelope Deposited");
-        }
+        //private void depositSlotButton_Click(object sender, EventArgs e)
+        //{
+        //    DepositEnvelope();
+        //    System.Windows.Forms.MessageBox.Show("Envelope Deposited");
+        //}
 
         private void WithdrawConfirmationButton_Click(object sender, EventArgs e)
         {

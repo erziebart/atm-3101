@@ -106,13 +106,13 @@
             // 
             // depositSlotButton
             // 
-            this.depositSlotButton.Location = new System.Drawing.Point(715, 68);
-            this.depositSlotButton.Name = "depositSlotButton";
-            this.depositSlotButton.Size = new System.Drawing.Size(18, 401);
-            this.depositSlotButton.TabIndex = 7;
-            this.depositSlotButton.Text = "Envelope";
-            this.depositSlotButton.UseVisualStyleBackColor = true;
-            this.depositSlotButton.Click += new System.EventHandler(this.depositSlotButton_Click);
+            //this.depositSlotButton.Location = new System.Drawing.Point(715, 68);
+            //this.depositSlotButton.Name = "depositSlotButton";
+            //this.depositSlotButton.Size = new System.Drawing.Size(18, 401);
+            //this.depositSlotButton.TabIndex = 7;
+            //this.depositSlotButton.Text = "Envelope";
+            //this.depositSlotButton.UseVisualStyleBackColor = true;
+            //this.depositSlotButton.Click += new System.EventHandler(this.depositSlotButton_Click);
             // 
             // label3
             // 
@@ -125,12 +125,12 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(194, 369);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(289, 99);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Dispenser";
-            this.button4.UseVisualStyleBackColor = true;
+            //this.button4.Location = new System.Drawing.Point(194, 369);
+            //this.button4.Name = "button4";
+            //this.button4.Size = new System.Drawing.Size(289, 99);
+            //this.button4.TabIndex = 9;
+            //this.button4.Text = "Dispenser";
+            //this.button4.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
