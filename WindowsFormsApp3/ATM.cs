@@ -18,21 +18,28 @@ namespace WindowsFormsApp3
     
         }
 
-        public void TakeOut(int number)
+        public Boolean TakeOut(int number)
         {
             if (bill20sLeft - number >= 0)
             {
                 bill20sLeft -= number;
+                return true;
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("Insufficient Bills");
+                System.Windows.Forms.MessageBox.Show("ATM lacks sufficient funds to process request.");
+                return false;
             }
         }
 
         public AccountList GetDatabase()
         {
             return accounts;
+        }
+
+        public int getBill20Left()
+        {
+            return this.bill20sLeft;
         }
 
   
