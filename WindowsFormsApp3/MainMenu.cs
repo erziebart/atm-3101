@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
         private Account instanceAccount;
         private Login login;
         private int numToWithdraw;
-        private long amtToDeposit;
+        private double amtToDeposit;
         private ATM atm;
 
         public MainMenu(Account account, Login login)
@@ -42,7 +42,7 @@ namespace WindowsFormsApp3
             //Go back to login
         }
 
-        public void Deposit(long amount, Account account)
+        public void Deposit(double amount, Account account)
         {
             account.Balance += amount;
             this.accountList.UpdateAcct(account);
@@ -118,7 +118,7 @@ namespace WindowsFormsApp3
 
         private void depositEnter_Click(object sender, EventArgs e)
         {
-            this.amtToDeposit = Convert.ToInt64(amountToDepositInput.Text);
+            this.amtToDeposit = Double.Parse(amountToDepositInput.Text);
             if (this.amtToDeposit != 0)
             {
                 Deposit(this.amtToDeposit, this.instanceAccount);
