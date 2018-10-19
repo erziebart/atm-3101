@@ -24,6 +24,6 @@ I worked with Sam to plan out the project: classes, attributes, and functions, a
 
 Kelley Valentine - kpv2106
 Implemented the ATM Class, which ties the JSON file, Account class, and AccountList class into a single, easy to use object.
-Also created the dummy classes DepositSlot and WithdrawSlot per assignment requirements. These simply served as placeholders for a couple static functions.
+Also created the dummy classes DepositSlot and WithdrawSlot per assignment requirements. These simply served as placeholders for a couple static functions. Also wrote usage tutorial.
 
 Name - Uni
