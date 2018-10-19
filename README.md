@@ -27,6 +27,9 @@ Usage Tutorial
     unlock your account by changing your account information inside the accounts.json file-- simply
     change the value of "IsLocked" to false.
     
+(7) If you at any point wish to create new accounts, you will have to manually open the accounts.json file
+    and add a new account.
+    
     And that's it! Thank you for checking out our program!
     
      
