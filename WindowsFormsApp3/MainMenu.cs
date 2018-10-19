@@ -147,11 +147,22 @@ namespace WindowsFormsApp3
             {
                 Withdraw(numToWithdraw, this.instanceAccount);
                 numToWithdraw = 0;
+                unselectAllWithdrawRadioButtons();
                 AmounfOf20sToWithdrawLabel.Text = 0.ToString();
                 WithdrawPanel.Hide();
             }
             //Does nothing if submit 0
             
+        }
+
+        private void unselectAllWithdrawRadioButtons()
+        {
+            withdraw20.Checked = false;
+            withdraw40.Checked = false;
+            withdraw60.Checked = false;
+            withdraw80.Checked = false;
+            withdraw100.Checked = false;
+            withdrawOther.Checked = false;
         }
 
         private void AmounfOf20sToWithdrawLabel_Click(object sender, EventArgs e)
