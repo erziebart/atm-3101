@@ -2,7 +2,28 @@
 atm implementation in C# with .NET framework
 
 
-Usage Instructions
+Usage Tutorial
+(1) Upon download, open accounts.json. This is a starter list with valid accounts. 
+    For this example, let's use the account associated with CardNum : 1 and Pin : 1234.
+(2) Run the program and enter the chosen account's credentials. You will be guided to a menu
+    with three options: "Check Balance", "Depost", and "Withdraw". Click "Check Balance." 
+    You will see a balance of $7340 appear. Click "Close".
+(3) Click "Withdraw." A new menu will appear. You can choose any of the options-- if you choose
+    "Other", you will be able to use the "+" and "-" buttons to increase and decrease your 
+    desired withdraw amount by $20.If you attempt to withdraw more than you have left in your balance,
+    the program will not complete your transaction. Otherwise, you will see a success notification, 
+    and your balance will reflect your withdrawal.
+(4) Now click "Deposit". Go ahead and try depositing an amount-- any whole dollar amount will work.
+(5) Now click "Logout" in the upper left hand corner.
+(6) Let's try using an incorrect password. Try logging into the same account the wrong password.
+    After 3 failed attempts, your account will be locked out. Note that these failed attempts do not
+    need to consecutive to lock your account. Once your account is locked, you will have to manually 
+    unlock your account by changing your account information inside the accounts.json file.
+    
+    And that's it! Thank you for checking out our program!
+    
+     
+     
 
 
 
