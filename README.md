@@ -24,7 +24,8 @@ Usage Tutorial
 (6) Let's try using an incorrect password. Try logging into the same account the wrong password.
     After 3 failed attempts, your account will be locked out. Note that these failed attempts do not
     need to consecutive to lock your account. Once your account is locked, you will have to manually 
-    unlock your account by changing your account information inside the accounts.json file.
+    unlock your account by changing your account information inside the accounts.json file-- simply
+    change the value of "IsLocked" to false.
     
     And that's it! Thank you for checking out our program!
     
