@@ -19,13 +19,13 @@ namespace WindowsFormsApp3
         private long amtToDeposit;
         private ATM atm;
 
-        public MainMenu(Account account, Login login)
+        public MainMenu(Account account, ATM atm, Login login)
         {
             InitializeComponent();
-            this.accountList = new AccountList("accounts.json");
+            this.accountList = atm.GetDatabase();
             this.instanceAccount = account;
             this.login = login;
-            this.atm = new ATM("accounts.json");
+            this.atm = atm;
             userNameLabel.Text = this.instanceAccount.CardNum;
             WithdrawPanel.Hide();
             depositPanel.Hide();

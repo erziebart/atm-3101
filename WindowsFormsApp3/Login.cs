@@ -91,7 +91,7 @@ namespace WindowsFormsApp3
     /* opens the user's main menu */
     private void OpenMainMenu(Account acct)
     {
-        MainMenu menu = new MainMenu(acct, this);
+        MainMenu menu = new MainMenu(acct, atm, this);
         this.Hide();
         AcctNumBox.Clear();
         PinBox.Clear();
