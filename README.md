@@ -7,6 +7,7 @@ Usage Instructions
 
 
 
+
 Each members contributions:
 
 Layne Britton - lmb2289
@@ -20,5 +21,9 @@ I worked with Evan to plan out the general flow and components (e.g. classes and
 
 Evan Ziebart - erz2109
 I worked with Sam to plan out the project: classes, attributes, and functions, and wrote a specification that the team used to develop our atm. For my part, I handled development of the login menu UI and functionality, including account verification and locking. I was also the one in charge of managing the source control of the project as well as our code repository on github.
+
+Kelley Valentine - kpv2106
+Implemented the ATM Class, which ties the JSON file, Account class, and AccountList class into a single, easy to use object.
+Also created the dummy classes DepositSlot and WithdrawSlot per assignment requirements. These simply served as placeholders for a couple static functions.
 
 Name - Uni
